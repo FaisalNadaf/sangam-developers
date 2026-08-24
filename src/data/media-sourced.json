@@ -1,0 +1,236 @@
+{
+  "developers/line-conductor-work": {
+    "name": "line-conductor-work",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#aad1f1",
+    "alt": "Linesmen working on the insulator strings of a high-voltage lattice transmission tower"
+  },
+  "developers/switchyard-gantry": {
+    "name": "switchyard-gantry",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#f2f1f0",
+    "alt": "Gantry structures, isolators and busbars inside a high-voltage substation switchyard"
+  },
+  "developers/land-levelling": {
+    "name": "land-levelling",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#695f53",
+    "alt": "Tracked excavator levelling open ground during site preparation"
+  },
+  "developers/road-compaction": {
+    "name": "road-compaction",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#566164",
+    "alt": "Vibratory roller compacting the formation of a newly cut site access road"
+  },
+  "developers/foundation-rebar": {
+    "name": "foundation-rebar",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#606163",
+    "alt": "Site worker tying the reinforcement cage of a foundation before concrete is cast"
+  },
+  "developers/solar-array-crew": {
+    "name": "solar-array-crew",
+    "folder": "developers",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#9da1a4",
+    "alt": "Two workers in hard hats and high-visibility coveralls working across a photovoltaic array"
+  },
+  "renewables/rooftop-install-crew": {
+    "name": "rooftop-install-crew",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#97949c",
+    "alt": "Crew installing photovoltaic modules across a large industrial rooftop"
+  },
+  "renewables/wind-farm-scrub": {
+    "name": "wind-farm-scrub",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#675f57",
+    "alt": "Wind turbines standing across dry rocky scrubland"
+  },
+  "renewables/solar-wind-aerial": {
+    "name": "solar-wind-aerial",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#53666c",
+    "alt": "Aerial view of a solar plant and wind turbines sharing one site"
+  },
+  "renewables/site-survey-level": {
+    "name": "site-survey-level",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#9b9ea1",
+    "alt": "Surveyor sighting a levelling instrument on a construction site"
+  },
+  "renewables/inverter-testing": {
+    "name": "inverter-testing",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#d9dad5",
+    "alt": "Two technicians testing an inverter cabinet with a multimeter"
+  },
+  "renewables/meter-board": {
+    "name": "meter-board",
+    "folder": "renewables",
+    "widths": [
+      640,
+      1280
+    ],
+    "w": 1280,
+    "h": 853,
+    "ratio": 1.501,
+    "color": "#a9a598",
+    "alt": "Bank of energy meters, breakers and cabling on an industrial distribution board"
+  },
+  "capability/tower-technician": {
+    "name": "tower-technician",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#969ea7",
+    "alt": "Technician working on the insulator strings of a high-voltage lattice transmission tower"
+  },
+  "capability/site-grading": {
+    "name": "site-grading",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#029fd0",
+    "alt": "Backhoe loader grading bare earth across a cleared site"
+  },
+  "capability/foundation-crew": {
+    "name": "foundation-crew",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#665b58",
+    "alt": "Site crew in hard hats working among the reinforcement bars of a foundation"
+  },
+  "capability/substation-gantries": {
+    "name": "substation-gantries",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#98aaa3",
+    "alt": "Gantry structures and insulator strings inside a high-voltage substation switchyard"
+  },
+  "capability/pv-commissioning": {
+    "name": "pv-commissioning",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#9b9c9a",
+    "alt": "Technician in hard hat and high-visibility vest checking a photovoltaic array"
+  },
+  "capability/road-cutting": {
+    "name": "road-cutting",
+    "folder": "capability",
+    "widths": [
+      640,
+      1024
+    ],
+    "w": 1024,
+    "h": 1024,
+    "ratio": 1,
+    "color": "#af8a68",
+    "alt": "Wheel loader cutting and grading an access road into a slope"
+  }
+}

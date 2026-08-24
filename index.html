@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F6F8F4" />
+    <!--
+      The Sangam Developers mark, set on the same white plate the site itself
+      always gives it (the navbar chip, the rhombus on /about). The mark's
+      turbine is white-filled with a green outline, so on a dark browser tab a
+      transparent version would read as a white smudge; the plate is what keeps
+      it legible on a light tab and a dark one alike.
+
+      `.ico` is listed last but wins in the browsers that only look for it;
+      the PNGs are what modern browsers pick, largest that fits.
+    -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!--
+      Two families, each doing one job:
+        Merriweather — every heading, and the standfirst under it
+        News Cycle   — body copy and the whole interface: navigation,
+                       buttons, labels, register data, forms, captions
+      Merriweather is requested as a variable font so its optical-size axis
+      is available; News Cycle ships only 400 and 700, and both are asked for.
+    -->
+    <!--
+      The home hero backdrop is a video, but the still behind it is what paints
+      first and is the largest contentful paint on the most-visited entry
+      point — so it is requested alongside the HTML rather than after the
+      bundle parses. The video itself is fetched by the component, and only
+      where it is wanted.
+    -->
+    <link
+      rel="preload"
+      as="image"
+      href="/media/hero/hero-poster-1920.webp"
+      imagesrcset="/media/hero/hero-poster-640.webp 640w, /media/hero/hero-poster-1280.webp 1280w, /media/hero/hero-poster-1920.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=News+Cycle:wght@400;700&display=swap"
+    />
+
+    <!--
+      Fallback metadata for the first paint and for crawlers that do not run JS.
+      Each page renders its own title and description; the Seo component strips
+      these two on mount so a page never ships with both.
+    -->
+    <title data-default>Sangam Group of Companies: Renewable energy infrastructure</title>
+    <meta
+      data-default
+      name="description"
+      content="Land development, civil works, substations and 33 kV transmission for wind and solar projects across Maharashtra and Karnataka."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

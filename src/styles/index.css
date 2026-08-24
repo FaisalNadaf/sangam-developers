@@ -1,0 +1,742 @@
+@import 'tailwindcss';
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SANGAM GROUP — design system
+
+   One sheet holds the whole visual language: grounds, ink, rules, radii,
+   elevation, the type scale and the handful of surface recipes every
+   component draws from. Nothing outside this file invents a colour, a radius
+   or a type size.
+
+   The ground is drafting paper. Colour is derived from the two company marks
+   and the site photography — the leaf greens of the Sangam Developers "SD"
+   mark, the blue and green of the Sangam Renewables "SR" mark, and the red
+   laterite soil that shows in almost every site photograph.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Grounds ─────────────────────────────────────────────────────────
+     Four light steps and two dark ones, and the steps are wide enough to
+     be seen. The old set ran #fafaf8 / #f2f5f0 / #e9eee7, which is under
+     three per cent of luminance between neighbours — laid end to end down
+     a page they read as one flat wash, which is most of why the site felt
+     dull. These are spaced so a reader can tell where one section stops. */
+  --color-paper: #ffffff;
+  --color-canvas: #f6f8f4;
+  --color-canvas-2: #eaefe5;
+  --color-canvas-3: #dde5d6;
+
+  /* The dark grounds. `deep` is the page-level dark; `deep-2` is a surface
+     raised off it — cards, insets and panels inside a dark section. */
+  --color-deep: #0b1310;
+  --color-deep-2: #16221d;
+
+  /* ── Ink ─────────────────────────────────────────────────────────────
+     Four steps, each with a job: headings, body, secondary, decorative.
+     The first three clear WCAG AA on every ground above, `muted` included —
+     it is set dark enough to hold 4.5:1 on `canvas-3`, the deepest of the
+     light grounds, so it is safe wherever it is used. `faint` is for rules,
+     icons and disabled states — never for text that must be read. */
+  --color-ink: #0a1210;
+  --color-body: #35443f;
+  --color-muted: #4f5e58;
+  --color-faint: #86948e;
+
+  /* Ink for the dark grounds, so a dark section never reaches for a raw
+     white or a hand-mixed rgba. */
+  --color-ink-inv: #ffffff;
+  --color-body-inv: #d3ddd6;
+  --color-muted-inv: #a3b0a9;
+
+  /* ── Rules ───────────────────────────────────────────────────────────
+     A hairline has to survive being struck across a metre of empty paper,
+     which the old #e7ebe4 did not. */
+  --color-line: #dde4d7;
+  --color-line-2: #c2ccb9;
+  --color-line-inv: rgba(255, 255, 255, 0.14);
+  --color-line-inv-2: rgba(255, 255, 255, 0.26);
+
+  /* ── Group accent ────────────────────────────────────────────────────
+     Sits between the two marks. The deep cut carries type and primary
+     fills; the bright cut is for small marks, ticks and diagram strokes. */
+  --color-brand: #256b31;
+  --color-brand-bright: #6eac3d;
+  --color-brand-tint: #e6f1de;
+  --color-brand-ink: #163f1e;
+
+  /* ── The two company marks ───────────────────────────────────────────
+     `-deep` cuts set type on paper; the bright originals are fills only. */
+  --color-sd: #6eac3d;
+  --color-sd-deep: #256b2a;
+  --color-sre: #0097da;
+  --color-sre-deep: #05567b;
+  --color-sre-green: #00a858;
+
+  /* The wash multiplied over the hero footage, so the dark it grades toward
+     is the group's green-black rather than neutral grey. */
+  --color-brand-deep-wash: #12291b;
+
+  /* Site earth — status and emphasis only. */
+  --color-laterite: #a8461a;
+
+  /* ── Type ────────────────────────────────────────────────────────────
+     Two families, and each has one job.
+
+       Merriweather — every heading, and the standfirst under it. A screen
+                      serif with a large x-height and open apertures, which
+                      is what carries the editorial voice.
+       News Cycle   — body copy and the whole interface: navigation,
+                      buttons, labels, register data, forms, captions.
+
+     News Cycle ships two weights and nothing between them, and the body
+     below turns synthesis off — so anything set in it uses 400 or 700 and
+     never 500 or 600, which would silently render as 400. */
+  --font-display: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-sans: 'News Cycle', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* The label and data voice. Not a monospace any more — the token name is
+     kept because a hundred call sites read `font-mono`, and what they all
+     actually mean is "the small, tracked, technical voice". */
+  --font-mono: 'News Cycle', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ── Radius ──────────────────────────────────────────────────────────
+     One scale, six steps, all of them tighter than they were. A 24 px card
+     corner reads as an app tile; this is a record of built infrastructure,
+     and its corners should be closer to a printed page than to a phone. */
+  --radius-chip: 0.375rem;
+  --radius-tile: 0.625rem;
+  --radius-card: 0.875rem;
+  --radius-panel: 1.125rem;
+  --radius-plate: 1.5rem;
+  --radius-pill: 62.5rem;
+
+  /* ── Elevation ───────────────────────────────────────────────────────
+     Shorter and tighter than they were. A long, wide, low-opacity shadow
+     is a soft glow, not an edge; these keep a close contact shadow so the
+     card has a definite bottom, and spend the rest on a short ambient
+     spread. Tinted with the ink rather than pure black, so raised surfaces
+     read as lit paper. */
+  --shadow-soft: 0 1px 1px rgba(10, 18, 16, 0.04), 0 2px 6px -3px rgba(10, 18, 16, 0.09);
+  --shadow-card: 0 1px 2px rgba(10, 18, 16, 0.05), 0 8px 22px -14px rgba(10, 18, 16, 0.18);
+  --shadow-lift: 0 2px 4px rgba(10, 18, 16, 0.06), 0 16px 34px -18px rgba(10, 18, 16, 0.24);
+  /* The plate tier was the one token that broke the recipe above: a single
+     wide blur with no contact layer, which on a pale ground reads as a grey
+     haze under a floating rectangle rather than as a surface resting on the
+     page. Same reach as before — the last layer is the old value — with the
+     near shadow the rest of the scale already had. */
+  --shadow-plate:
+    0 2px 4px -1px rgba(10, 18, 16, 0.06),
+    0 14px 28px -12px rgba(10, 18, 16, 0.16),
+    0 34px 64px -30px rgba(10, 18, 16, 0.34);
+
+  /* A plate lying half on a photograph and half on the page. It needs a
+     darker, longer throw than the paper tiers to hold against a sunlit sky,
+     and a tight contact layer so the half hanging over pale canvas still has
+     an edge. Tinted to the deep green rather than the ink, because what it
+     falls on is usually a photograph. */
+  --shadow-deck:
+    0 1px 2px rgba(6, 17, 12, 0.18),
+    0 10px 20px -8px rgba(6, 17, 12, 0.3),
+    0 26px 48px -18px rgba(6, 17, 12, 0.45);
+  --shadow-deck-lift:
+    0 2px 4px rgba(6, 17, 12, 0.22),
+    0 16px 30px -10px rgba(6, 17, 12, 0.36),
+    0 40px 72px -22px rgba(6, 17, 12, 0.55);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────── */
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    background-color: var(--color-canvas);
+    /*
+      Reveals that arrive from the side sit outside the viewport while they
+      animate. `clip` removes that from the scrollable area without making
+      the root a scroll container — which `hidden` would do, and which would
+      break every `position: sticky` on the site.
+    */
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.68;
+    /* News Cycle has 400 and 700 and nothing between. Synthesis off means a
+       stray `font-weight: 600` renders at 400 rather than as a smeared fake
+       bold — visible, and therefore fixable, rather than quietly ugly. */
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  /*
+    Every heading, everywhere. Merriweather carries an optical-size axis, so
+    the browser is told to use it: the same weight is cut a little lighter and
+    a little wider at display sizes than at 17 px, which is the difference
+    between a heading that looks set and one that looks scaled up.
+  */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.014em;
+    text-wrap: balance;
+    color: var(--color-ink);
+  }
+
+  h5,
+  h6 {
+    font-size: 1rem;
+    line-height: 1.34;
+    letter-spacing: -0.006em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Forms inherit the interface face rather than the browser's. */
+  input,
+  textarea,
+  select,
+  button {
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Register figures line up in their columns whatever the face does with
+     proportional digits. */
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ── Type scale ───────────────────────────────────────────────────────────
+   Five display steps in Merriweather, four text steps in News Cycle, and
+   nothing else. Clamped so one class works from a 320 px phone to a 2560 px
+   desktop without a separate mobile scale.
+
+   Every size below was re-cut for these two faces. Merriweather runs large
+   for its point size and needs less negative tracking than a grotesque;
+   News Cycle is narrow and needs a little more size and a little more
+   letter-spacing than the sans it replaced.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/** Home hero only. */
+@utility t-hero {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.3vw + 0.55rem, 3.875rem);
+  line-height: 1.1;
+  letter-spacing: -0.024em;
+}
+
+/** Section openers. */
+@utility t-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(1.6875rem, 3vw + 0.1rem, 2.875rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+/**
+ * Inner-page masthead.
+ *
+ * A step below `t-display`, because the page header band is a fixed height
+ * and a heading sized for a full-viewport hero will not fit two lines in it.
+ */
+@utility t-page-title {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(1.625rem, 2.5vw + 0.15rem, 2.625rem);
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+
+@utility t-h2 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(1.4375rem, 2.2vw + 0.15rem, 2.25rem);
+  line-height: 1.18;
+  letter-spacing: -0.016em;
+}
+
+@utility t-h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: clamp(1.0625rem, 0.85vw + 0.62rem, 1.375rem);
+  line-height: 1.32;
+  letter-spacing: -0.008em;
+}
+
+/**
+ * The standfirst under a heading.
+ *
+ * The one run of body-length copy that stays in the serif, because it is
+ * still part of the heading's sentence rather than the section's argument.
+ */
+@utility t-lead {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: clamp(1rem, 0.6vw + 0.78rem, 1.1875rem);
+  line-height: 1.66;
+  letter-spacing: -0.003em;
+}
+
+@utility t-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: clamp(1rem, 0.5vw + 0.82rem, 1.125rem);
+  line-height: 1.7;
+  letter-spacing: 0.004em;
+}
+
+@utility t-small {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  letter-spacing: 0.006em;
+}
+
+/** Section markers, nav overlines, badges, button text on chips. */
+@utility t-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/** Register readings: counts, kV, km, certificate numbers, addresses. */
+@utility t-data {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+/** Figures set large — the counters, the register totals. */
+/**
+ * The reading on a statistic card.
+ *
+ * Weight before scale. A lone "2" sets about a third of the width of "26", so
+ * at one size the single-digit cards read as weaker than their neighbours even
+ * though the type is identical — which is what made the rail look uneven.
+ * Merriweather is loaded variable across 300..900, so the figure takes a real
+ * 800 rather than a synthesised one, and gains density without the card having
+ * to give up more height to it.
+ *
+ * The size step above `text-5xl` is modest and fluid: enough that a single
+ * digit still carries the card, short of the display scale that made the rail
+ * shout. `font-optical-sizing` does the rest — at this size Merriweather's
+ * optical axis tightens the digits on its own.
+ */
+@utility t-stat {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: clamp(3.5rem, 1.9vw + 2.1rem, 4.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+@utility t-figure {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────── */
+
+@utility shell {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+
+  @media (width >= 80rem) {
+    padding-inline: 4rem;
+  }
+}
+
+@utility section-y {
+  padding-block: clamp(3.5rem, 6.5vw, 6.5rem);
+}
+
+/* Roomier rhythm, for the two or three sections that carry a full composition. */
+@utility section-y-lg {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+/**
+ * Left gutter that matches `shell` from inside a full-bleed column.
+ *
+ * A split page header lets its image run to the viewport edge, so the copy
+ * half cannot sit in a centred container. This reproduces the shell's left
+ * margin arithmetic — half the leftover width plus the shell padding — so the
+ * two still line up on every screen.
+ */
+@utility shell-l {
+  padding-inline-start: max(1.25rem, calc((100vw - 90rem) / 2 + 1.25rem));
+
+  @media (width >= 48rem) {
+    padding-inline-start: max(2.5rem, calc((100vw - 90rem) / 2 + 2.5rem));
+  }
+
+  @media (width >= 80rem) {
+    padding-inline-start: max(4rem, calc((100vw - 90rem) / 2 + 4rem));
+  }
+}
+
+/* Fine engineering grid, kept from the drafting-sheet language. */
+@utility grid-field {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-ink) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-ink) 5%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/** The same grid, cut for a dark ground. */
+@utility grid-field-inv {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* ── Section grounds ──────────────────────────────────────────────────────
+   Four grounds, and a page is composed by alternating them rather than by
+   painting every section the same. `ground-deep` is the one that does the
+   most work: a page with no dark band in it has no punctuation.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/** Raised white — cards on it need a rule, not a shadow. */
+@utility ground-paper {
+  background-color: var(--color-paper);
+}
+
+/** The default page ground. */
+@utility ground-canvas {
+  background-color: var(--color-canvas);
+}
+
+/** The tinted band. */
+@utility ground-tint {
+  background-color: var(--color-canvas-2);
+}
+
+/**
+ * The dark band.
+ *
+ * Sets its own ink as well as its ground, so everything inside inherits a
+ * readable colour instead of each element reaching for `text-white`. A very
+ * shallow top-lit gradient stops a large dark area reading as a flat block.
+ */
+@utility ground-deep {
+  background-color: var(--color-deep);
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-brand-deep-wash) 55%, transparent) 0%,
+    transparent 45%
+  );
+  color: var(--color-body-inv);
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    color: var(--color-ink-inv);
+  }
+}
+
+/** Hairline along the top edge, so two like grounds still read as two. */
+@utility band-top {
+  border-top: 1px solid var(--color-line);
+}
+
+@utility band-bottom {
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ── Surfaces ─────────────────────────────────────────────────────────────
+   One card recipe, used everywhere. Anything that calls itself a card gets
+   these properties and then differs only in its contents.
+   ─────────────────────────────────────────────────────────────────────── */
+
+@utility card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+}
+
+/**
+ * Adds the hover. Split from `card` so static cards pay no transition cost.
+ *
+ * The lift is the card's own, rather than a shadow swap alone: a surface that
+ * only deepens its shadow on hover reads as a lighting change, and a surface
+ * that also moves reads as a control.
+ */
+@utility card-interactive {
+  transition:
+    box-shadow 0.4s var(--ease-out-quint),
+    border-color 0.4s var(--ease-out-quint),
+    transform 0.4s var(--ease-out-quint);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--color-line-2);
+  }
+}
+
+/**
+ * The card, cut for a white ground.
+ *
+ * `card` sits off the page on a shadow, which works on `canvas` and on `tint`
+ * and quietly fails on `ground-paper`: a white surface on white paper, held
+ * by a #dde4d7 hairline, is a rectangle you have to go looking for. Same
+ * surface, with the rule doing the work instead — one hairline, a step
+ * stronger than the site's, picking up the record's own colour on hover.
+ *
+ * That rule used to be two: a second line was drawn six pixels inside the
+ * first, as a picture mount around the content. Repeated across every card on
+ * every page it stopped reading as a mount and started reading as a doubled
+ * border — and on any card whose photograph ran the full width it had no
+ * margin to sit in, so it cut across the image instead. One line does the same
+ * job without the noise.
+ *
+ * `--frame` is that colour. Set it inline from whatever the card is about —
+ * the company a person works for, the division that owns a project — and the
+ * frame answers in it. Left unset it falls back to the group green, so the
+ * utility is safe on its own.
+ */
+@utility card-frame {
+  --frame: var(--color-brand);
+
+  position: relative;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-line-2);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    border-color 0.45s var(--ease-out-quint),
+    box-shadow 0.45s var(--ease-out-quint),
+    transform 0.45s var(--ease-out-quint);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+    border-color: color-mix(in srgb, var(--frame) 42%, var(--color-line-2));
+  }
+}
+
+/** The same card, cut for a dark ground. */
+@utility card-dark {
+  background-color: var(--color-deep-2);
+  border: 1px solid var(--color-line-inv);
+  border-radius: var(--radius-card);
+
+  transition:
+    border-color 0.4s var(--ease-out-quint),
+    background-color 0.4s var(--ease-out-quint),
+    transform 0.4s var(--ease-out-quint);
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-line-inv-2);
+    background-color: color-mix(in srgb, var(--color-deep-2) 82%, var(--color-brand-bright) 18%);
+  }
+}
+
+/**
+ * Page-header plate feather.
+ *
+ * The image's own alpha ramps out toward the copy, so it dissolves into
+ * whatever is behind it. A scrim painted in the page colour only works while
+ * the ground is exactly that colour and always leaves a faint seam where the
+ * two meet; a mask has no seam at any width or on any ground.
+ */
+@utility plate-feather {
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%);
+
+  @media (width >= 64rem) {
+    mask-image: linear-gradient(to right, transparent 0%, #000 30%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 30%);
+  }
+}
+
+/** Rounded photographic plate. */
+@utility plate {
+  border-radius: var(--radius-plate);
+  overflow: hidden;
+  background-color: var(--color-canvas-3);
+}
+
+/* Soft radial bloom used behind a few section headers, to stop very open
+   compositions reading as blank paper. Purely decorative. */
+@utility bloom {
+  background-image: radial-gradient(
+    60% 60% at 50% 0%,
+    color-mix(in srgb, var(--color-brand-bright) 12%, transparent) 0%,
+    transparent 70%
+  );
+}
+
+/* ── Motion primitives ────────────────────────────────────────────────── */
+
+/*
+  The client rail. The row is rendered twice, so translating by exactly half
+  the track width lands the second copy where the first began and the loop is
+  seamless. One composited transform — no layout and no paint per frame.
+*/
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@utility mask-line {
+  overflow: hidden;
+  display: block;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+/**
+ * Film grain.
+ *
+ * Two jobs. The obvious one is that a trace of grain is the difference between
+ * footage that looks shot and footage that looks compressed. The load-bearing
+ * one is banding: a large, dark, slow gradient over video is exactly the case
+ * 8-bit colour handles worst, and the stepping it produces is most of why an
+ * un-grained video hero reads as muddy. A little noise dithers those steps
+ * away.
+ *
+ * Static tile, one composited layer, no animation — grain that crawls is an
+ * effect; grain that sits still is a finish.
+ */
+@utility film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+}
+
+/** Perspective container for the 3D tilt cards. */
+@utility tilt-scene {
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+
+/* Scrollbar — quiet on paper */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-canvas);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line-2);
+    border: 3px solid var(--color-canvas);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-faint);
+  }
+}
+
+/* Horizontal galleries hide their bar; a progress rail is drawn instead. */
+.no-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Reduced motion ───────────────────────────────────────────────────────
+   Every animated element is authored so that its resting state is the final
+   state. Turning motion off therefore loses nothing but the movement.
+   ─────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

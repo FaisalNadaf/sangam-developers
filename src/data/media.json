@@ -1,0 +1,764 @@
+{
+ "developers/tower-lineman": {
+  "name": "tower-lineman",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 863,
+  "h": 1527,
+  "ratio": 0.5652,
+  "color": "#636e72",
+  "alt": "Sangam Developers linesman working at height on a 33 kV double-pole transmission structure"
+ },
+ "developers/substation-lattice": {
+  "name": "substation-lattice",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1507,
+  "h": 1052,
+  "ratio": 1.4325,
+  "color": "#6b6e67",
+  "alt": "Lattice tower and switchyard gantry at an EHV substation built by Sangam Developers"
+ },
+ "developers/dusk-line": {
+  "name": "dusk-line",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 1242,
+  "h": 787,
+  "ratio": 1.5781,
+  "color": "#676c6e",
+  "alt": "Overhead transmission line silhouetted against dusk on a Sangam Developers project corridor"
+ },
+ "developers/sunset-poles": {
+  "name": "sunset-poles",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1346,
+  "h": 796,
+  "ratio": 1.691,
+  "color": "#736f62",
+  "alt": "Newly strung transmission poles running across farmland at sunset"
+ },
+ "developers/pole-transport": {
+  "name": "pole-transport",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1886,
+  "h": 901,
+  "ratio": 2.0932,
+  "color": "#686b6d",
+  "alt": "Tractor-hauled trailer moving a transmission pole along a village road to site"
+ },
+ "developers/crane-material": {
+  "name": "crane-material",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1403,
+  "h": 796,
+  "ratio": 1.7626,
+  "color": "#6c6a69",
+  "alt": "Crane and crew handling steel pole sections at a Sangam Developers line site"
+ },
+ "developers/row-corridor": {
+  "name": "row-corridor",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 1242,
+  "h": 872,
+  "ratio": 1.4243,
+  "color": "#706b66",
+  "alt": "Right-of-way corridor cleared through ploughed farmland for a transmission line"
+ },
+ "developers/tower-erection": {
+  "name": "tower-erection",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 957,
+  "h": 1707,
+  "ratio": 0.5606,
+  "color": "#607075",
+  "alt": "Crane erecting a steel transmission structure on a Sangam Developers project"
+ },
+ "developers/conductor-stringing": {
+  "name": "conductor-stringing",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1507,
+  "h": 1052,
+  "ratio": 1.4325,
+  "color": "#536d82",
+  "alt": "Linesman stringing conductor on a 33 kV double-pole structure"
+ },
+ "developers/piling-rig": {
+  "name": "piling-rig",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 863,
+  "h": 1527,
+  "ratio": 0.5652,
+  "color": "#686d69",
+  "alt": "Piling rig drilling a foundation beside an erected transmission structure"
+ },
+ "developers/mms-assembly": {
+  "name": "mms-assembly",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 1251,
+  "h": 872,
+  "ratio": 1.4346,
+  "color": "#746b61",
+  "alt": "Site crew assembling a module mounting structure on a solar project"
+ },
+ "developers/lattice-field": {
+  "name": "lattice-field",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 1251,
+  "h": 797,
+  "ratio": 1.5696,
+  "color": "#636b72",
+  "alt": "Line of lattice transmission towers crossing open agricultural land"
+ },
+ "developers/mms-crew": {
+  "name": "mms-crew",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 910,
+  "h": 901,
+  "ratio": 1.01,
+  "color": "#76675f",
+  "alt": "Crew in high-visibility gear bolting up module mounting structures on site"
+ },
+ "developers/dp-structure": {
+  "name": "dp-structure",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 910,
+  "h": 787,
+  "ratio": 1.1563,
+  "color": "#586e7d",
+  "alt": "Completed double-pole structure with jumpers and insulators against an open sky"
+ },
+ "developers/dp-structure-2": {
+  "name": "dp-structure-2",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 863,
+  "h": 787,
+  "ratio": 1.0966,
+  "color": "#546681",
+  "alt": "Detail of a double-pole transmission structure with conductor terminations"
+ },
+ "developers/site-team": {
+  "name": "site-team",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1820,
+  "h": 834,
+  "ratio": 2.1823,
+  "color": "#5d5452",
+  "alt": "Sangam Developers site team and workforce photographed together at a project site"
+ },
+ "developers/csr-school": {
+  "name": "csr-school",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1583,
+  "h": 853,
+  "ratio": 1.8558,
+  "color": "#6d6968",
+  "alt": "Sangam Developers handing over computer equipment to a village school"
+ },
+ "developers/csr-gathering": {
+  "name": "csr-gathering",
+  "folder": "developers",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1478,
+  "h": 664,
+  "ratio": 2.2259,
+  "color": "#756b61",
+  "alt": "Community gathering hosted under the Sangam Renewables and Electrosystems LLP banner"
+ },
+ "developers/csr-handover": {
+  "name": "csr-handover",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 1109,
+  "h": 853,
+  "ratio": 1.3001,
+  "color": "#6c6b69",
+  "alt": "Sangam Developers representatives at a community handover ceremony"
+ },
+ "developers/csr-felicitation": {
+  "name": "csr-felicitation",
+  "folder": "developers",
+  "widths": [
+   640
+  ],
+  "w": 872,
+  "h": 834,
+  "ratio": 1.0456,
+  "color": "#736050",
+  "alt": "Felicitation ceremony attended by Sangam Developers representatives"
+ },
+ "renewables/solar-farm": {
+  "name": "solar-farm",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 2919,
+  "h": 1947,
+  "ratio": 1.4992,
+  "color": "#47718f",
+  "alt": "Utility-scale ground-mounted solar array running toward a rocky hill range"
+ },
+ "renewables/wind-farm": {
+  "name": "wind-farm",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 3456,
+  "h": 2304,
+  "ratio": 1.5,
+  "color": "#486a8d",
+  "alt": "Row of wind turbines on open ground under a clouded sky"
+ },
+ "renewables/solar-rows-aerial": {
+  "name": "solar-rows-aerial",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 2481,
+  "h": 1653,
+  "ratio": 1.5009,
+  "color": "#7d744f",
+  "alt": "Overhead view of long rows of photovoltaic modules"
+ },
+ "renewables/solar-field-wide": {
+  "name": "solar-field-wide",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1058,
+  "ratio": 1.8147,
+  "color": "#315aa5",
+  "alt": "Wide view of a ground-mounted solar plant under a clear blue sky"
+ },
+ "renewables/engineers-panels": {
+  "name": "engineers-panels",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1579,
+  "h": 1053,
+  "ratio": 1.4995,
+  "color": "#5f6977",
+  "alt": "Two engineers inspecting a ground-mounted photovoltaic array on site"
+ },
+ "renewables/solar-bloom": {
+  "name": "solar-bloom",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1579,
+  "h": 1053,
+  "ratio": 1.4995,
+  "color": "#49648c",
+  "alt": "Photovoltaic array with wildflowers growing along the module rows"
+ },
+ "renewables/solar-dusk": {
+  "name": "solar-dusk",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 732,
+  "h": 1280,
+  "ratio": 0.5719,
+  "color": "#5f7376",
+  "alt": "Photovoltaic modules catching low sun at dusk"
+ },
+ "renewables/wind-hilltop": {
+  "name": "wind-hilltop",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 2250,
+  "h": 4000,
+  "ratio": 0.5625,
+  "color": "#306183",
+  "alt": "Wind turbine standing on a ridgeline above open country"
+ },
+ "renewables/solar-green-field": {
+  "name": "solar-green-field",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1280,
+  "h": 853,
+  "ratio": 1.5006,
+  "color": "#5f776a",
+  "alt": "Solar array set in green farmland with hills behind"
+ },
+ "renewables/roller-wtg-base": {
+  "name": "roller-wtg-base",
+  "folder": "renewables",
+  "widths": [
+   626
+  ],
+  "w": 626,
+  "h": 835,
+  "ratio": 0.7497,
+  "color": "#7e6458",
+  "alt": "Soil compactor working the platform at the base of a wind turbine generator"
+ },
+ "renewables/compactor": {
+  "name": "compactor",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 769,
+  "h": 760,
+  "ratio": 1.0118,
+  "color": "#8f6547",
+  "alt": "Vibratory roller compacting a newly cut internal access road"
+ },
+ "renewables/access-road": {
+  "name": "access-road",
+  "folder": "renewables",
+  "widths": [
+   626
+  ],
+  "w": 626,
+  "h": 835,
+  "ratio": 0.7497,
+  "color": "#8a674b",
+  "alt": "Compacted internal access road built to a wind turbine location"
+ },
+ "renewables/haul-road": {
+  "name": "haul-road",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 1200,
+  "h": 1600,
+  "ratio": 0.75,
+  "color": "#79715c",
+  "alt": "Graded haul road curving through scrub toward a project site"
+ },
+ "renewables/gravel-road": {
+  "name": "gravel-road",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1599,
+  "h": 720,
+  "ratio": 2.2208,
+  "color": "#6c7065",
+  "alt": "Freshly laid gravel road surface on a renewable energy site"
+ },
+ "renewables/turbine-blade": {
+  "name": "turbine-blade",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 682,
+  "h": 837,
+  "ratio": 0.8148,
+  "color": "#4c6a89",
+  "alt": "Wind turbine rotor and nacelle seen from directly beneath"
+ },
+ "renewables/ht-line-field": {
+  "name": "ht-line-field",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 960,
+  "h": 1138,
+  "ratio": 0.8436,
+  "color": "#686b6d",
+  "alt": "HT distribution line running along a field boundary on a project site"
+ },
+ "renewables/drill-rig": {
+  "name": "drill-rig",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 961,
+  "h": 1136,
+  "ratio": 0.846,
+  "color": "#736a62",
+  "alt": "Drilling rig at work on a foundation beside an erected structure"
+ },
+ "renewables/crane-erection": {
+  "name": "crane-erection",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 960,
+  "h": 1280,
+  "ratio": 0.75,
+  "color": "#556c80",
+  "alt": "Crane lifting a steel structure into position during erection works"
+ },
+ "renewables/site-crew": {
+  "name": "site-crew",
+  "folder": "renewables",
+  "widths": [
+   507
+  ],
+  "w": 507,
+  "h": 517,
+  "ratio": 0.9807,
+  "color": "#736862",
+  "alt": "Sangam Renewables site crew in high-visibility gear at a project location"
+ },
+ "renewables/crew-wide": {
+  "name": "crew-wide",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 1014,
+  "h": 492,
+  "ratio": 2.061,
+  "color": "#746861",
+  "alt": "Full site workforce assembled on a Sangam Renewables project"
+ },
+ "renewables/cable-laying": {
+  "name": "cable-laying",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 912,
+  "h": 1261,
+  "ratio": 0.7232,
+  "color": "#6e6e67",
+  "alt": "Crew guiding a steel member during cable and structure installation"
+ },
+ "renewables/ofc-trench": {
+  "name": "ofc-trench",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 954,
+  "h": 1281,
+  "ratio": 0.7447,
+  "color": "#6d6c68",
+  "alt": "Ground works under way alongside an erected transmission structure"
+ },
+ "renewables/mms-install": {
+  "name": "mms-install",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1331,
+  "h": 722,
+  "ratio": 1.8435,
+  "color": "#6c6a69",
+  "alt": "Module mounting structure being installed on a solar site"
+ },
+ "renewables/panel-mount": {
+  "name": "panel-mount",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1599,
+  "h": 720,
+  "ratio": 2.2208,
+  "color": "#6b6c6a",
+  "alt": "Technician fixing a photovoltaic module onto its mounting structure"
+ },
+ "renewables/inverter": {
+  "name": "inverter",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 956,
+  "h": 464,
+  "ratio": 2.0603,
+  "color": "#756f61",
+  "alt": "Wall-mounted solar inverter installed and commissioned"
+ },
+ "renewables/panel-board": {
+  "name": "panel-board",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 717,
+  "h": 1204,
+  "ratio": 0.5955,
+  "color": "#6c6d68",
+  "alt": "Technician working inside an electrical distribution panel"
+ },
+ "renewables/structure-shed": {
+  "name": "structure-shed",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1599,
+  "h": 720,
+  "ratio": 2.2208,
+  "color": "#726d64",
+  "alt": "Completed steel structure over a mounted photovoltaic installation"
+ },
+ "renewables/container-yard": {
+  "name": "container-yard",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1599,
+  "h": 720,
+  "ratio": 2.2208,
+  "color": "#6d6868",
+  "alt": "Site container and equipment yard on a renewable energy project"
+ },
+ "renewables/solar-wind-sunset": {
+  "name": "solar-wind-sunset",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 768,
+  "h": 768,
+  "ratio": 1.0,
+  "color": "#6f5952",
+  "alt": "Solar array and wind turbines together at sunset"
+ },
+ "renewables/csr-vehicle": {
+  "name": "csr-vehicle",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1600,
+  "h": 1200,
+  "ratio": 1.3333,
+  "color": "#6c6c69",
+  "alt": "Community gathering at a Sangam Renewables CSR activity"
+ },
+ "renewables/csr-group": {
+  "name": "csr-group",
+  "folder": "renewables",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1597,
+  "h": 740,
+  "ratio": 2.1581,
+  "color": "#727063",
+  "alt": "Group photograph from a Sangam Renewables community programme"
+ },
+ "renewables/csr-meeting": {
+  "name": "csr-meeting",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 946,
+  "h": 449,
+  "ratio": 2.1069,
+  "color": "#6a6c5d",
+  "alt": "Sangam Renewables representatives at a community meeting"
+ },
+ "renewables/csr-programme": {
+  "name": "csr-programme",
+  "folder": "renewables",
+  "widths": [
+   640
+  ],
+  "w": 1100,
+  "h": 461,
+  "ratio": 2.3861,
+  "color": "#736c62",
+  "alt": "Attendees at a Sangam Renewables community programme"
+ },
+ "group/ravikumar-bagali": {
+  "name": "ravikumar-bagali",
+  "folder": "group",
+  "widths": [
+   640
+  ],
+  "w": 761,
+  "h": 732,
+  "ratio": 1.0396,
+  "color": "#56637f",
+  "alt": "Portrait of Mr. Ravikumar Bagali, B.E. (ECE)"
+ },
+ "group/rashmi-bagali": {
+  "name": "rashmi-bagali",
+  "folder": "group",
+  "widths": [
+   490
+  ],
+  "w": 490,
+  "h": 630,
+  "ratio": 0.778,
+  "color": "#815559",
+  "alt": "Portrait of Ms. Rashmi Ravikumar Bagali"
+ },
+ "group/mahesh": {
+  "name": "mahesh",
+  "folder": "group",
+  "widths": [
+   640
+  ],
+  "w": 729,
+  "h": 770,
+  "ratio": 0.9468,
+  "color": "#524a54",
+  "alt": "Portrait of Mr. Mahesh"
+ },
+ "group/siddharam-houde": {
+  "name": "siddharam-houde",
+  "folder": "group",
+  "widths": [
+   601
+  ],
+  "w": 601,
+  "h": 809,
+  "ratio": 0.743,
+  "color": "#b72a1f",
+  "alt": "Portrait of Mr. Siddharam Rajendra Houde"
+ },
+ "certificates/sd-iso-9001": {
+  "name": "sd-iso-9001",
+  "folder": "certificates",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1280,
+  "h": 1814,
+  "ratio": 0.705,
+  "color": "#5b717a",
+  "alt": "ISO 9001:2015 quality management certificate issued to Sangam Developers"
+ },
+ "certificates/sd-iso-45001": {
+  "name": "sd-iso-45001",
+  "folder": "certificates",
+  "widths": [
+   589
+  ],
+  "w": 589,
+  "h": 831,
+  "ratio": 0.709,
+  "color": "#5a707b",
+  "alt": "ISO 45001:2018 occupational health and safety certificate issued to Sangam Developers"
+ },
+ "certificates/sre-iso-9001": {
+  "name": "sre-iso-9001",
+  "folder": "certificates",
+  "widths": [
+   640
+  ],
+  "w": 640,
+  "h": 914,
+  "ratio": 0.7,
+  "color": "#5a727b",
+  "alt": "ISO 9001:2015 quality management certificate issued to Sangam Renewables and Electrosystems LLP"
+ },
+ "certificates/sre-iso-45001": {
+  "name": "sre-iso-45001",
+  "folder": "certificates",
+  "widths": [
+   640,
+   1280
+  ],
+  "w": 1280,
+  "h": 1802,
+  "ratio": 0.71,
+  "color": "#5a707b",
+  "alt": "ISO 45001:2018 occupational health and safety certificate issued to Sangam Renewables and Electrosystems LLP"
+ }
+}
