@@ -1,0 +1,51 @@
+# Netlify build configuration.
+#
+# Without this file Netlify publishes the repository root, which serves
+# `index.html` alongside the uncompiled `src/main.tsx` it points at, and puts
+# nothing from `public/` at the web root. That produces exactly three symptoms:
+# the module script arrives as `application/octet-stream` and is refused, every
+# favicon 404s, and `/media/...` 404s. All of them are one problem: the site was
+# never built.
+#
+# SPA routing is not declared here on purpose. It lives in `public/_redirects`,
+# which Vite copies into `dist/`, so the rule travels with the artifact. Rules in
+# this file would silently take precedence over that one.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 requires ^20.19.0 || >=22.12.0. Pinned so a change to Netlify's
+  # default build image cannot fail the build without warning.
+  NODE_VERSION = "22"
+
+# Fingerprinted output and the media library are immutable: the filename
+# changes whenever the bytes do, so they can be cached indefinitely.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Icons sit at the web root and keep their names across deploys, so they get a
+# day rather than a year: long enough to stop refetching, short enough that a
+# replaced mark reaches people.
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
