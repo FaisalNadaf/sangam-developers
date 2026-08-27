@@ -139,16 +139,25 @@ export function Capability() {
 				{/*
           One photograph at a time by design. Six site plates at equal size
           compete with each other and none of them is legible; one open plate
-          at nearly half the row is large enough to read the work in it, and
-          the five slivers beside it are the index.
+          at nearly half the column is large enough to read the work in it,
+          and the five bars above and below it are the index.
+
+          A column at every width, rather than a row that becomes one on a
+          phone. Six plates laid across a 1300 px shell are six slivers, and
+          the open one is a letterbox band; stacked, every plate keeps the
+          proportions of the photograph inside it. The column is held to
+          65rem so it stays a stack of plates instead of stretching into
+          bands on a wide screen, and its height is fluid so the closed bars
+          never fall below reading size.
         */}
-				<Reveal className="mt-12 lg:mt-16">
+				<Reveal className="mx-auto mt-12 w-full max-w-[65rem] lg:mt-16">
 					<AccordionGallery
 						items={PANELS}
 						defaultIndex={0}
 						accentColor={PLATE_ACCENT}
 						overlayColor={PLATE_OVERLAY}
-						height={520}
+						orientation="vertical"
+						height="clamp(620px, 68vw, 980px)"
 						gap={10}
 						radius={20}
 						expandRatio={0.44}
@@ -157,7 +166,7 @@ export function Capability() {
 						dim={0.4}
 						parallax={0.5}
 						trigger="hover"
-						sizes="(max-width: 640px) 92vw, (max-width: 1024px) 60vw, 44vw"
+						sizes="(min-width: 1100px) 1040px, 92vw"
 					/>
 				</Reveal>
 			</div>

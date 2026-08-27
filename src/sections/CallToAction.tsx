@@ -88,20 +88,24 @@ export function CallToAction({
 
               <Reveal direction="right" delay={0.18} className="lg:col-span-5">
                 <ul className="grid gap-3">
-                  <li>
-                    <a
-                      href={`tel:${GROUP.phoneHref}`}
-                      className="group flex items-center gap-5 rounded-card border border-white/12 bg-white/8 p-5 backdrop-blur-md transition-[background-color,border-color,transform] duration-400 ease-out-expo hover:-translate-y-1 hover:border-white/25 hover:bg-white/14"
-                    >
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/12 transition-transform duration-400 ease-spring group-hover:scale-110">
-                        <Phone className="h-5 w-5 text-white" strokeWidth={1.6} aria-hidden="true" />
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="t-label block text-white/60">Direct line</span>
-                        <span className="t-h3 mt-1 block text-white">{GROUP.phone}</span>
-                      </span>
-                    </a>
-                  </li>
+                  {GROUP.phones.map((line, i) => (
+                    <li key={line.href}>
+                      <a
+                        href={`tel:${line.href}`}
+                        className="group flex items-center gap-5 rounded-card border border-white/12 bg-white/8 p-5 backdrop-blur-md transition-[background-color,border-color,transform] duration-400 ease-out-expo hover:-translate-y-1 hover:border-white/25 hover:bg-white/14"
+                      >
+                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/12 transition-transform duration-400 ease-spring group-hover:scale-110">
+                          <Phone className="h-5 w-5 text-white" strokeWidth={1.6} aria-hidden="true" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="t-label block text-white/60">
+                            {i === 0 ? 'Direct line' : 'Second line'}
+                          </span>
+                          <span className="t-h3 mt-1 block text-white">{line.display}</span>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
                   {GROUP.emails.map((email) => (
                     <li key={email}>
                       <a

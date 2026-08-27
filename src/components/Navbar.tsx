@@ -266,12 +266,15 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
               >
                 Let’s talk
               </Link>
-              <a
-                href={`tel:${GROUP.phoneHref}`}
-                className="mt-3 flex items-center justify-center rounded-chip border border-line bg-paper px-6 py-4 t-data text-ink shadow-soft"
-              >
-                {GROUP.phone}
-              </a>
+              {GROUP.phones.map((line) => (
+                <a
+                  key={line.href}
+                  href={`tel:${line.href}`}
+                  className="mt-3 flex items-center justify-center rounded-chip border border-line bg-paper px-6 py-4 t-data text-ink shadow-soft"
+                >
+                  {line.display}
+                </a>
+              ))}
             </motion.div>
           </nav>
         </motion.div>

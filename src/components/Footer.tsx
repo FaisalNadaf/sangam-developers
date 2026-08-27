@@ -65,15 +65,18 @@ export function Footer() {
             <p className="t-body mt-6 max-w-xs text-body-inv">{GROUP.positioning}</p>
 
             <div className="mt-7 flex flex-col gap-2.5">
-              <a
-                href={`tel:${GROUP.phoneHref}`}
-                className="group flex items-center gap-3.5 rounded-tile border border-line-inv bg-deep-2 px-4 py-3.5 t-data text-white transition-[transform,background-color,border-color] duration-400 ease-out-expo hover:-translate-y-0.5 hover:border-line-inv-2 hover:bg-white/8"
-              >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-bright/18 transition-transform duration-400 ease-spring group-hover:scale-110">
-                  <Phone className="h-4 w-4 text-brand-bright" strokeWidth={1.75} aria-hidden="true" />
-                </span>
-                {GROUP.phone}
-              </a>
+              {GROUP.phones.map((line) => (
+                <a
+                  key={line.href}
+                  href={`tel:${line.href}`}
+                  className="group flex items-center gap-3.5 rounded-tile border border-line-inv bg-deep-2 px-4 py-3.5 t-data text-white transition-[transform,background-color,border-color] duration-400 ease-out-expo hover:-translate-y-0.5 hover:border-line-inv-2 hover:bg-white/8"
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-bright/18 transition-transform duration-400 ease-spring group-hover:scale-110">
+                    <Phone className="h-4 w-4 text-brand-bright" strokeWidth={1.75} aria-hidden="true" />
+                  </span>
+                  {line.display}
+                </a>
+              ))}
               {GROUP.emails.map((email) => (
                 <a
                   key={email}

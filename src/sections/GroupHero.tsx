@@ -7,7 +7,7 @@ import { Eyebrow } from '@/components/Eyebrow'
 import { HeroVideo } from '@/components/HeroVideo'
 import { useReducedMotion } from '@/hooks/useReducedMotion'
 
-const HEADLINE = ['Before a turbine turns,', 'someone builds the', 'ground it stands on.']
+const HEADLINE = ['We Build, You Secure',]
 
 /**
  * The home hero.

@@ -17,7 +17,7 @@ const organisation = {
 	alternateName: "Sangam Group",
 	url: SITE,
 	description: GROUP.positioning,
-	telephone: GROUP.phone,
+	telephone: GROUP.phones.map((line) => line.display),
 	email: GROUP.emails[0],
 	areaServed: GROUP.states.map((state) => ({ "@type": "State", name: state })),
 	subOrganization: COMPANIES.map((company) => ({

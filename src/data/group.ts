@@ -41,6 +41,17 @@ export interface Company {
   accentOnBone: string
 }
 
+/**
+ * The lines the group publishes, in the order they are offered. The first is
+ * the direct line printed on both company profiles; the second was added
+ * afterwards. Single-slot places (the navigation button, a hero call button)
+ * take the first; places with room list them all.
+ */
+const PHONES = [
+  { display: '+91 8975 262 895', href: '+918975262895' },
+  { display: '+91 9880 292 908', href: '+919880292908' },
+] as const
+
 export const GROUP = {
   name: 'Sangam Group',
   fullName: 'Sangam Group of Companies',
@@ -51,9 +62,11 @@ export const GROUP = {
    */
   positioning:
     'Two engineering companies building the ground layer of India’s renewable energy transition: land, civil works, substations and transmission.',
-  phone: '+91 8975 262 895',
-  phoneHref: '+918975262895',
-  emails: ['sangamdevelopers@gmail.com', 'sangamrenewables@gmail.com'],
+  phones: PHONES,
+  /** The first line, for the one-number slots. */
+  phone: PHONES[0].display,
+  phoneHref: PHONES[0].href,
+  emails: ['sangamdevelopers91@gmail.com', 'sangamrenewables@gmail.com'],
   states: ['Maharashtra', 'Karnataka'],
 } as const
 

@@ -23,7 +23,7 @@ import {
 } from "@/components/company";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { CERTIFICATIONS } from "@/data/certifications";
-import { companyByKey } from "@/data/group";
+import { companyByKey, GROUP } from "@/data/group";
 import { CLIENTS, projectsFor } from "@/data/projects";
 import { DEVELOPERS } from "@/data/developers";
 
@@ -64,8 +64,8 @@ const schema = {
 	foundingDate: "2016-03",
 	slogan: COMPANY.tagline,
 	description: COMPANY.role,
-	telephone: "+91 8975 262 895",
-	email: "sangamdevelopers@gmail.com",
+	telephone: GROUP.phones.map((line) => line.display),
+	email: GROUP.emails[0],
 	parentOrganization: {
 		"@type": "Organization",
 		name: "Sangam Group of Companies",

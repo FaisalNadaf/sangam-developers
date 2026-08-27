@@ -9,6 +9,9 @@ import { Reveal, Stagger, StaggerItem } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { COMPANIES, GROUP, LEADERSHIP, OFFICES } from "@/data/group";
 
+/** Both published lines, in offer order. */
+const TELEPHONES = GROUP.phones.map((line) => line.display);
+
 const schema = {
 	"@context": "https://schema.org",
 	"@type": "ContactPage",
@@ -17,13 +20,13 @@ const schema = {
 		"@type": "Organization",
 		"@id": `${SITE}/#organisation`,
 		name: GROUP.fullName,
-		telephone: GROUP.phone,
+		telephone: TELEPHONES,
 		email: GROUP.emails[0],
 		contactPoint: COMPANIES.map((company, i) => ({
 			"@type": "ContactPoint",
 			contactType: "sales",
 			name: company.legalName,
-			telephone: GROUP.phone,
+			telephone: TELEPHONES,
 			email: GROUP.emails[i],
 			areaServed: "IN",
 			availableLanguage: ["en", "hi", "kn", "mr"],
@@ -38,7 +41,7 @@ export default function Contact() {
 		<PageTransition>
 			<Seo
 				title="Contact Sangam Group: Sangli and Vijayapur"
-				description="One direct line for both Sangam companies: +91 8975 262 895. Offices in Sangli, Maharashtra and Vijayapur, Karnataka. Send a site enquiry."
+				description={`Two direct lines for both Sangam companies: ${TELEPHONES.join(" and ")}. Offices in Sangli, Maharashtra and Vijayapur, Karnataka. Send a site enquiry.`}
 				path="/contact"
 				image="/media/developers/sunset-poles-1280.webp"
 				schema={[schema, breadcrumb([{ name: "Contact", path: "/contact" }])]}
@@ -46,20 +49,25 @@ export default function Contact() {
 
 			<PageHeader
 				eyebrow="Contact"
-				lines={["One line for both companies."]}
-				intro="Call, or send the site, the scope and the timeline. Both companies answer on one line, and the reply comes from the people doing the work."
+				lines={["Two lines for both companies."]}
+				intro="Call either number, or send the site, the scope and the timeline. Both companies answer on the same lines, and the reply comes from the people doing the work."
 				image="developers/sunset-poles"
 				imageAlt="Newly strung transmission poles running across farmland at sunset">
-				<a
-					href={`tel:${GROUP.phoneHref}`}
-					className="group inline-flex items-center gap-3 rounded-chip bg-paper px-6 py-3 font-sans text-[0.9375rem] font-bold text-ink shadow-lift transition-[transform,box-shadow] duration-400 ease-out-expo hover:-translate-y-0.5 hover:shadow-plate">
-					<Phone
-						className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
-						strokeWidth={2}
-						aria-hidden="true"
-					/>
-					{GROUP.phone}
-				</a>
+				<div className="flex flex-wrap gap-3">
+					{GROUP.phones.map((line) => (
+						<a
+							key={line.href}
+							href={`tel:${line.href}`}
+							className="group inline-flex items-center gap-3 rounded-chip bg-paper px-6 py-3 font-sans text-[0.9375rem] font-bold text-ink shadow-lift transition-[transform,box-shadow] duration-400 ease-out-expo hover:-translate-y-0.5 hover:shadow-plate">
+							<Phone
+								className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
+								strokeWidth={2}
+								aria-hidden="true"
+							/>
+							{line.display}
+						</a>
+					))}
+				</div>
 			</PageHeader>
 
 			{/* ── Reaching them, and writing to them ──────────────────────────
@@ -83,33 +91,39 @@ export default function Contact() {
 
 						<div className="mt-8 grid gap-4">
 							<Reveal direction="left">
-								<div>
-									<a
-										href={`tel:${GROUP.phoneHref}`}
-										className="group relative flex flex-col overflow-hidden rounded-card p-7 shadow-card transition-[transform,box-shadow] duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-lift md:p-8"
-										style={{ background: "var(--color-brand)" }}>
-										<span
-											className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-white/10 transition-transform duration-700 ease-out-expo group-hover:scale-125"
+								<div
+									className="relative flex flex-col overflow-hidden rounded-card p-7 shadow-card md:p-8"
+									style={{ background: "var(--color-brand)" }}>
+									<span
+										className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-white/10"
+										aria-hidden="true"
+									/>
+									<span className="relative flex h-13 w-13 items-center justify-center rounded-full bg-white/16">
+										<Phone
+											className="h-6 w-6 text-white"
+											strokeWidth={1.5}
 											aria-hidden="true"
 										/>
-										<span className="relative flex h-13 w-13 items-center justify-center rounded-full bg-white/16 transition-transform duration-500 ease-spring group-hover:scale-110">
-											<Phone
-												className="h-6 w-6 text-white"
-												strokeWidth={1.5}
-												aria-hidden="true"
-											/>
-										</span>
-										<div className="relative mt-7">
-											<p className="t-label text-white">
-												Direct line for both companies
-											</p>
-											<p className="t-h2 mt-3 text-white">{GROUP.phone}</p>
-											<p className="t-small mt-4 text-white/90">
-												{lead.name}, {lead.qualification},{" "}
-												{lead.roles.map((r) => r.title).join(" and ")}
-											</p>
+									</span>
+									<div className="relative mt-7">
+										<p className="t-label text-white">
+											Direct lines for both companies
+										</p>
+										<div className="mt-3 flex flex-col items-start gap-1.5">
+											{GROUP.phones.map((line) => (
+												<a
+													key={line.href}
+													href={`tel:${line.href}`}
+													className="t-h2 text-white transition-opacity duration-300 hover:opacity-80">
+													{line.display}
+												</a>
+											))}
 										</div>
-									</a>
+										<p className="t-small mt-4 text-white/90">
+											{lead.name}, {lead.qualification},{" "}
+											{lead.roles.map((r) => r.title).join(" and ")}
+										</p>
+									</div>
 								</div>
 							</Reveal>
 

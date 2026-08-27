@@ -29,8 +29,12 @@ export interface AccordionGalleryProps {
   accentColor?: string
   overlayColor?: string
   textColor?: string
-  /** Height of the row in px. A column derives its own height from this. */
-  height?: number
+  /**
+   * Height of the row. A number is taken as pixels; a string is used as a CSS
+   * length, so a caller can hand it a `clamp()` and let the box scale with the
+   * viewport. A column derives its own height from this.
+   */
+  height?: number | string
   gap?: number
   radius?: number
   /** Fraction of the row the open panel takes, 0.2–0.9. */
@@ -144,9 +148,13 @@ export function AccordionGallery({
   /**
    * A column has to hold every collapsed panel plus the open one, so its
    * height is tied to the count. Sizing it off `height` alone would mean a
-   * seventh panel silently squeezes the other six.
+   * seventh panel silently squeezes the other six. A caller passing a CSS
+   * length has taken that arithmetic on itself, so it is used as given.
    */
-  const boxSize = vertical ? Math.max(Math.round(height * 1.3), count * 104) : height
+  const boxHeight =
+    typeof height === 'string' ? height
+    : vertical ? `${Math.max(Math.round(height * 1.3), count * 104)}px`
+    : `${height}px`
 
   const applyLayout = useCallback(
     (animate: boolean) => {
@@ -310,7 +318,7 @@ export function AccordionGallery({
       className={`flex w-full max-w-full list-none ${vertical ? 'flex-col' : 'flex-row'} ${
         vertical ? 'perspective-[900px]' : 'perspective-[1400px]'
       } ${className}`}
-      style={{ gap: `${gap}px`, height: `${boxSize}px` }}
+      style={{ gap: `${gap}px`, height: boxHeight }}
     >
       {items.map((item, i) => {
         const isActive = i === active
