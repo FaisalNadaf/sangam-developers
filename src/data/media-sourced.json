@@ -220,6 +220,19 @@
     "color": "#9b9c9a",
     "alt": "Technician in hard hat and high-visibility vest checking a photovoltaic array"
   },
+  "capability/solar-array-aerial": {
+    "name": "solar-array-aerial",
+    "folder": "capability",
+    "widths": [
+      640,
+      1200
+    ],
+    "w": 1200,
+    "h": 900,
+    "ratio": 1.3333,
+    "color": "#6f7362",
+    "alt": "Aerial view of an elevated ground-mounted solar array spanning green farmland, with further arrays and low hills on the horizon"
+  },
   "capability/road-cutting": {
     "name": "road-cutting",
     "folder": "capability",

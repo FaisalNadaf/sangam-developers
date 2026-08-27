@@ -76,7 +76,7 @@ const DETAIL: Record<
 			"Inverter and LT panel installation",
 			"Plant monitoring, commissioning and handover",
 		],
-		image: "capability/pv-commissioning",
+		image: "capability/solar-array-aerial",
 	},
 	Roads: {
 		summary:
