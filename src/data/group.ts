@@ -207,7 +207,12 @@ export interface Person {
   name: string
   qualification?: string
   roles: { company: CompanyKey; title: string }[]
-  photo: string
+  /**
+   * Registry key for the portrait. Optional: a member whose photograph is not
+   * yet on file gets the monogram fallback in `TeamCard` rather than an empty
+   * frame, and gains the picture the moment a key is filled in here.
+   */
+  photo?: string
 }
 
 export const LEADERSHIP: Person[] = [
@@ -221,18 +226,16 @@ export const LEADERSHIP: Person[] = [
     photo: 'group/ravikumar-bagali',
   },
   {
-    name: 'Rashmi Ravikumar Bagali',
-    roles: [{ company: 'renewables', title: 'Designated Partner' }],
-    photo: 'group/rashmi-bagali',
+    name: 'Datta Bamane',
+    roles: [{ company: 'renewables', title: 'CEO — Electrical Department' }],
   },
   {
-    name: 'Mahesh',
-    roles: [{ company: 'renewables', title: 'Designated Partner' }],
-    photo: 'group/mahesh',
+    name: 'Chindanand Hiremath',
+    roles: [{ company: 'renewables', title: 'Accounts Head & Manager' }],
   },
   {
     name: 'Siddharam Rajendra Houde',
-    roles: [{ company: 'renewables', title: 'Designated Partner' }],
+    roles: [{ company: 'renewables', title: 'Civil Head' }],
     photo: 'group/siddharam-houde',
   },
 ]

@@ -266,6 +266,11 @@ export function TeamCard({
     company: companies.find((c) => c.key === role.company)!,
   }))
 
+  /** First and last initial — what stands in for a portrait that is not in yet. */
+  const parts = person.name.split(' ').filter(Boolean)
+  const initials = (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : ''))
+    .toUpperCase()
+
   return (
     <div className="h-full">
       <figure
@@ -273,12 +278,30 @@ export function TeamCard({
         style={{ '--frame': roles[0].company.accent } as React.CSSProperties}
       >
         <div className="relative aspect-4/5 overflow-hidden rounded-chip bg-canvas-3">
-          <Media
-            src={person.photo}
-            alt={`${person.name}, ${person.roles.map((r) => r.title).join(' and ')}`}
-            sizes="(min-width: 1024px) 22vw, (min-width: 640px) 44vw, 84vw"
-            className="transition-transform duration-1000 ease-out-expo group-hover:scale-[1.05]"
-          />
+          {person.photo ? (
+            <Media
+              src={person.photo}
+              alt={`${person.name}, ${person.roles.map((r) => r.title).join(' and ')}`}
+              sizes="(min-width: 1024px) 22vw, (min-width: 640px) 44vw, 84vw"
+              className="transition-transform duration-1000 ease-out-expo group-hover:scale-[1.05]"
+            />
+          ) : (
+            // No portrait on file for this member yet, so the frame carries the
+            // monogram in the person's own company colour rather than sitting
+            // empty. Same shape and crop as a photograph, so the row stays in
+            // register and dropping a real one in later changes nothing else.
+            <div
+              className="grid-field flex h-full w-full items-center justify-center bg-canvas-2"
+              aria-hidden="true"
+            >
+              <span
+                className="t-figure text-5xl transition-transform duration-1000 ease-out-expo group-hover:scale-[1.05]"
+                style={{ color: roles[0].company.accentOnBone, opacity: 0.45 }}
+              >
+                {initials}
+              </span>
+            </div>
+          )}
           <div
             className="absolute inset-0 bg-linear-to-t from-deep/45 via-transparent to-transparent opacity-0 transition-opacity duration-600 group-hover:opacity-100"
             aria-hidden="true"
