@@ -393,7 +393,7 @@ export function WhySangam() {
 							/>
 						</div>
 
-						<Field className="grid grid-cols-1 divide-y divide-line md:grid-cols-2 md:grid-rows-2 md:gap-x-10 md:gap-y-12 md:divide-y-0 lg:grid-cols-[minmax(0,1fr)_var(--wc-d)_minmax(0,1fr)] lg:grid-rows-2 lg:gap-x-6 lg:gap-y-[clamp(2rem,7vh,4.5rem)] xl:gap-x-10">
+						<Field className="grid grid-cols-1 divide-y divide-line md:grid-cols-2 md:grid-rows-2 md:gap-x-10 md:gap-y-12 md:divide-y-0 lg:grid-cols-[minmax(0,1fr)_var(--wc-d)_minmax(0,1fr)] lg:grid-rows-2 lg:gap-x-6 lg:gap-y-[clamp(2rem,7vh,4.5rem)] wide:gap-x-10">
 							{REASONS.map((reason, i) => {
 								const right = i % 2 === 1;
 								const lower = i > 1;

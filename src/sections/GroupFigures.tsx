@@ -130,7 +130,7 @@ export function GroupFigures() {
         />
 
         <Stagger
-          className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:gap-5 xl:grid-cols-4"
+          className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-14 lg:gap-5 wide:grid-cols-4"
           each={0.09}
           delayChildren={0.05}
         >

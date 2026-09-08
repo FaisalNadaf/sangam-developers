@@ -14,9 +14,15 @@ import { Wordmark } from './Wordmark'
  * with them — a menu that opens onto a single destination is a stile, not a
  * signpost.
  *
- * Seven items and two of them are two words long, so the full bar needs the
- * xl breakpoint rather than lg. Between 1024 and 1280 the mobile sheet is used
- * instead — a cramped bar that wraps is worse than a good sheet.
+ * Seven items and two of them are two words long, so the full bar needs more
+ * width than `lg` gives it — but less than the `xl` it used to ask for. The
+ * bar, the wordmark and the call to action measure about 930 px together, and
+ * `wide` (1120 px) leaves roughly a hundred spare; below that the sheet is
+ * used, a cramped bar that wraps being worse than a good sheet.
+ *
+ * That stop is also what keeps a desktop monitor at 125 % browser zoom on the
+ * desktop bar instead of dropping it to a hamburger — see
+ * `--breakpoint-wide` in the design system for why 70 rem and not 80.
  *
  * Labels are set in the body sans at sentence case, not in the mono label
  * style the rest of the site uses for eyebrows and data. Tracked-out uppercase
@@ -124,7 +130,7 @@ export function Navbar() {
             />
           </Link>
 
-          <ul className="hidden items-center gap-0.5 xl:flex">
+          <ul className="hidden items-center gap-0.5 wide:flex">
             {NAV.map((nav) => (
               <li key={nav.label}>
                 <NavLink
@@ -173,7 +179,7 @@ export function Navbar() {
 
           <button
             type="button"
-            className={`ml-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border shadow-soft transition-[transform,background-color,color,border-color] duration-300 active:scale-95 xl:hidden ${
+            className={`ml-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border shadow-soft transition-[transform,background-color,color,border-color] duration-300 active:scale-95 wide:hidden ${
               solid
                 ? 'border-line bg-paper text-ink'
                 : 'border-white/25 bg-white/12 text-white backdrop-blur-md'
@@ -221,7 +227,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed inset-0 z-40 flex flex-col bg-canvas pt-16 md:pt-18 xl:hidden"
+          className="fixed inset-0 z-40 flex flex-col bg-canvas pt-16 md:pt-18 wide:hidden"
           initial={{ clipPath: 'inset(0 0 100% 0)' }}
           animate={{ clipPath: 'inset(0 0 0% 0)' }}
           exit={{ clipPath: 'inset(0 0 100% 0)' }}

@@ -17,7 +17,7 @@ import { useReducedMotion } from '@/hooks/useReducedMotion'
 export function Carousel({
   children,
   ariaLabel,
-  itemClassName = 'w-[82vw] sm:w-[58vw] lg:w-[38vw] xl:w-[30vw]',
+  itemClassName = 'w-[82vw] sm:w-[58vw] lg:w-[38vw] wide:w-[30vw]',
   intervalMs = 4800,
   className = '',
   edge = 'shell',

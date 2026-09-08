@@ -143,6 +143,25 @@
     0 40px 72px -22px rgba(6, 17, 12, 0.55);
   --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 
+  /* ── Breakpoints ─────────────────────────────────────────────────────
+     One extra stop between `lg` and `xl`, at 1120 px.
+
+     A handful of compositions were gated at `xl` — the seven-item nav bar
+     chief among them — because they are the ones that need real width. 1280
+     px turned out to be the wrong number for that, and not because the
+     compositions are wrong: a browser at 125 % zoom on a 1920 px screen
+     reports a 1536 px viewport, and 125 % zoom on top of a 125 % Windows
+     display scale reports 1229 px. Both are wide screens showing a wide
+     page, and both used to fall through to the tablet layout — the bar
+     collapsing to a hamburger on a desktop monitor being the visible half
+     of it.
+
+     70 rem is where the bar actually stops fitting, rather than where a
+     default scale happens to have a stop: seven labels, the wordmark and
+     the call to action measure about 930 px, so 1120 px leaves roughly a
+     hundred to spare. Nothing above 80 rem changes. */
+  --breakpoint-wide: 70rem;
+
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);

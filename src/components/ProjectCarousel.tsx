@@ -73,7 +73,7 @@ export function ProjectCarousel({
       <Carousel
         className="mt-8 lg:mt-10"
         ariaLabel={`${eyebrow} project rail`}
-        itemClassName="w-[80vw] sm:w-[52vw] lg:w-[34vw] xl:w-[27vw]"
+        itemClassName="w-[80vw] sm:w-[52vw] lg:w-[34vw] wide:w-[27vw]"
         intervalMs={5200}
         loop
         cta={

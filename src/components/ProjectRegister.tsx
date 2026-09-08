@@ -206,7 +206,7 @@ function Row({ project, index }: { project: Project; index: number }) {
           {/* The slot is always reserved, so descriptions stay on one axis
               whether or not a site photograph exists for that entry. */}
           <span
-            className="hidden h-14 w-14 shrink-0 overflow-hidden rounded-tile bg-canvas-3 xl:block"
+            className="hidden h-14 w-14 shrink-0 overflow-hidden rounded-tile bg-canvas-3 wide:block"
             style={
               project.image
                 ? undefined
