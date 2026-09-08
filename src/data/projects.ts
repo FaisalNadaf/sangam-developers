@@ -747,3 +747,65 @@ export const REGISTER_COUNTS = {
 }
 
 export const projectsFor = byCompany
+
+/**
+ * The register in units rather than in rows.
+ *
+ * `REGISTER_COUNTS` answers "how many jobs"; this answers "how much work".
+ * Every figure is read straight off `PROJECTS`, so a new row moves them on
+ * their own, and every one is literal — the `value` and `scale` columns are
+ * summed, never estimated.
+ */
+
+/**
+ * Rows whose `scale` repeats a plant another row has already been counted
+ * for. Summing the column blind would publish that plant twice, so they are
+ * named here rather than quietly filtered: the exclusion is a reading of the
+ * source documents and should be checkable.
+ *
+ *   • SD-06 — inverter rooms at the same 30 MW Atria plant as SD-05
+ *   • SR-03 — NA conversion of the same 400 acres SR-02 developed
+ *
+ * It is deliberately not applied to the contract total below. Those two rows
+ * are separate contracts with their own values, and dropping them there would
+ * understate the order book rather than protect it from double counting.
+ */
+const SECOND_SCOPE = new Set(['SD-06', 'SR-03'])
+
+/**
+ * Sums the leading number of every `scale` the predicate accepts.
+ *
+ * `parseFloat` takes the figure off the front of the cell and stops at the
+ * first non-numeric character, which is the shape the column is written in
+ * — '10.00 km · 33 kV' is 10, '300 MW' is 300.
+ */
+const sumScale = (match: (scale: string) => boolean) =>
+  PROJECTS.reduce((total, p) => {
+    if (!p.scale || SECOND_SCOPE.has(p.id)) return total
+    return match(p.scale) ? total + parseFloat(p.scale) : total
+  }, 0)
+
+/**
+ * Contract value in ₹ crore. The column is printed in the two units the
+ * source profiles use, '85 Lakh' and '4.5 Cr', so the Lakh rows are converted
+ * at a hundred to the crore before summing. Every one of the 35 rows carries
+ * a value, which is why this is the register entire rather than the part of
+ * it that happened to be priced — worth re-checking if a row is ever added
+ * without one.
+ */
+const toCrore = (value: string) => {
+  const figure = parseFloat(value)
+  if (Number.isNaN(figure)) return 0
+  return /lakh/i.test(value) ? figure / 100 : figure
+}
+
+export const REGISTER_TOTALS = {
+  /** Contract value across the whole register, in ₹ crore. */
+  contractCr: Math.round(
+    PROJECTS.reduce((total, p) => total + (p.value ? toCrore(p.value) : 0), 0),
+  ),
+  /** Megawatts of plant across the sites the two companies have worked. */
+  capacityMw: Math.round(sumScale((scale) => scale.includes('MW'))),
+  /** Acres of land aggregated, developed and converted. */
+  landAcres: Math.round(sumScale((scale) => scale.includes('acres'))),
+}

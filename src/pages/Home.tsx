@@ -3,6 +3,7 @@
 import { PageTransition } from "@/components/PageTransition";
 import { Seo, SITE } from "@/components/Seo";
 import { GroupHero } from "@/sections/GroupHero";
+import { GroupFigures } from "@/sections/GroupFigures";
 import { Divisions } from "@/sections/Divisions";
 import { Capability } from "@/sections/Capability";
 import { FeaturedProjects } from "@/sections/FeaturedProjects";
@@ -70,6 +71,7 @@ export default function Home() {
 			/>
 
 			<GroupHero />
+			<GroupFigures />
 			<Divisions />
 			<Capability />
 			<FeaturedProjects />
