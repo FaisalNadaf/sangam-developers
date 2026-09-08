@@ -208,6 +208,13 @@ export interface Person {
   qualification?: string
   roles: { company: CompanyKey; title: string }[]
   /**
+   * Direct line. Same `{ display, href }` shape as `GROUP.phones`, so it feeds
+   * a `tel:` link the same way every other number on the site does. Two of
+   * these are the group's published lines — the people who answer them are
+   * named here rather than the numbers being repeated as a second fact.
+   */
+  phone?: { display: string; href: string }
+  /**
    * Registry key for the portrait. Optional: a member whose photograph is not
    * yet on file gets the monogram fallback in `TeamCard` rather than an empty
    * frame, and gains the picture the moment a key is filled in here.
@@ -223,19 +230,31 @@ export const LEADERSHIP: Person[] = [
       { company: 'developers', title: 'Proprietor' },
       { company: 'renewables', title: 'Managing Partner' },
     ],
+    phone: PHONES[0],
     photo: 'group/ravikumar-bagali',
   },
   {
     name: 'Datta Bamane',
-    roles: [{ company: 'renewables', title: 'CEO — Electrical Department' }],
+    roles: [
+      { company: 'renewables', title: 'Director & HOD — Electrical Department' },
+    ],
+    phone: { display: '+91 9890 558 677', href: '+919890558677' },
+    photo: 'group/datta-bamane',
   },
   {
     name: 'Chindanand Hiremath',
-    roles: [{ company: 'renewables', title: 'Accounts Head & Manager' }],
+    roles: [
+      { company: 'renewables', title: 'General Manager & Accounts HOD' },
+    ],
+    phone: PHONES[1],
+    photo: 'group/chindanand-hiremath',
   },
   {
     name: 'Siddharam Rajendra Houde',
-    roles: [{ company: 'renewables', title: 'Civil Head' }],
+    roles: [
+      { company: 'renewables', title: 'General Manager & HOD — Civil Department' },
+    ],
+    phone: { display: '+91 9545 052 593', href: '+919545052593' },
     photo: 'group/siddharam-houde',
   },
 ]

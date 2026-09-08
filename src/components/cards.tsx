@@ -1,4 +1,4 @@
-import { ArrowUpRight, MapPin } from 'lucide-react'
+import { ArrowUpRight, MapPin, Phone } from 'lucide-react'
 import type { Project } from '@/data/projects'
 import { companyByKey, type Person } from '@/data/group'
 import type { MarkKey } from '@/data/logos'
@@ -347,7 +347,7 @@ export function TeamCard({
             Title over company, because the title is the fact and the company
             is where to file it.
           */}
-          <ul className="mt-4 space-y-2.5">
+          <ul className="mt-4 mb-5 space-y-2.5">
             {roles.map(({ title, company }) => (
               <li key={company.key} className="flex gap-3">
                 <span
@@ -367,6 +367,34 @@ export function TeamCard({
               </li>
             ))}
           </ul>
+
+          {/*
+            The direct line, at the foot.
+
+            `mt-auto` puts it there deliberately rather than letting it follow
+            the roles: the slack a one-role card leaves now falls *above* the
+            number instead of below it, so the numbers line up across the row
+            even though the role blocks above them do not. It is the one thing
+            on the card a reader acts on, so it gets the card's own edge.
+
+            A real `tel:` link, not set type — on the phone this page is mostly
+            read on, that is the difference between a fact and a call.
+          */}
+          {person.phone && (
+            <a
+              href={`tel:${person.phone.href}`}
+              className="mt-auto flex items-center gap-2.5 border-t border-line pt-4 t-data text-muted transition-colors duration-300 hover:text-ink focus-visible:text-ink"
+              aria-label={`Call ${person.name} on ${person.phone.display}`}
+            >
+              <Phone
+                className="h-3.5 w-3.5 shrink-0 transition-transform duration-400 ease-out-expo group-hover:scale-110"
+                strokeWidth={2}
+                style={{ color: roles[0].company.accentOnBone }}
+                aria-hidden="true"
+              />
+              <span className="tabular-nums">{person.phone.display}</span>
+            </a>
+          )}
         </figcaption>
       </figure>
     </div>

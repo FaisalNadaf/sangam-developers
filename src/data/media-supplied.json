@@ -1,0 +1,26 @@
+{
+ "group/datta-bamane": {
+  "name": "datta-bamane",
+  "folder": "group",
+  "widths": [
+   469
+  ],
+  "w": 469,
+  "h": 695,
+  "ratio": 0.6748,
+  "color": "#6d696d",
+  "alt": "Portrait of Mr. Datta Bamane"
+ },
+ "group/chindanand-hiremath": {
+  "name": "chindanand-hiremath",
+  "folder": "group",
+  "widths": [
+   288
+  ],
+  "w": 288,
+  "h": 288,
+  "ratio": 1.0,
+  "color": "#456290",
+  "alt": "Portrait of Mr. Chindanand Hiremath"
+ }
+}

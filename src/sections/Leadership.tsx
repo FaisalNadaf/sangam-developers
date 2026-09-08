@@ -18,6 +18,9 @@ export const leadershipSchema = LEADERSHIP.map((person) => ({
   '@type': 'Person',
   name: person.name,
   jobTitle: person.roles.map((r) => r.title).join(', '),
+  // Spread rather than a null key: an absent number leaves the property off
+  // the node entirely, which is what a validator wants to see.
+  ...(person.phone ? { telephone: person.phone.display } : {}),
 }))
 
 export function Leadership() {
