@@ -10,9 +10,9 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   url: `${SITE}/clients`,
-  name: 'Clients: Sangam Group of Companies',
+  name: 'Clients: Sangam Ventures',
   description:
-    'The turbine and module manufacturers, independent power producers and state utilities named on the Sangam Group project register.',
+    'The turbine and module manufacturers, independent power producers and state utilities named on the Sangam Ventures project register.',
 }
 
 /**
@@ -36,8 +36,8 @@ export default function Clientele() {
   return (
     <PageTransition>
       <Seo
-        title="Clients: Sangam Group of Companies"
-        description={`The ${REGISTER_COUNTS.clients} clients on the Sangam Group register: turbine and module makers, independent power producers, state utilities and industry.`}
+        title="Clients: Sangam Ventures"
+        description={`The ${REGISTER_COUNTS.clients} clients on the Sangam Ventures register: turbine and module makers, independent power producers, state utilities and industry.`}
         path="/clients"
         image="/media/renewables/engineers-panels-1280.webp"
         schema={[schema, breadcrumb([{ name: 'Clients', path: '/clients' }])]}

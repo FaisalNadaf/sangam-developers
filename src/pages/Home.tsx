@@ -15,7 +15,7 @@ const organisation = {
 	"@type": "Organization",
 	"@id": `${SITE}/#organisation`,
 	name: GROUP.fullName,
-	alternateName: "Sangam Group",
+	alternateName: "Sangam Ventures",
 	url: SITE,
 	description: GROUP.positioning,
 	telephone: GROUP.phones.map((line) => line.display),
@@ -64,7 +64,7 @@ export default function Home() {
 	return (
 		<PageTransition>
 			<Seo
-				title="Sangam Group of Companies: Renewable energy infrastructure"
+				title="Sangam Ventures: Renewable energy infrastructure"
 				description="Land development, civil works, substations and 33 kV transmission for wind and solar projects across Maharashtra and Karnataka since 2017."
 				path="/"
 				schema={[organisation, website]}

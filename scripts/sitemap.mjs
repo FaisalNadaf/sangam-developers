@@ -1,7 +1,7 @@
 // Generates public/sitemap.xml from the route table. Run via `npm run sitemap`.
 import { writeFileSync } from 'node:fs'
 
-const SITE = 'https://sangamgroup.in'
+const SITE = 'https://sangamventures.in'
 // Mirrors the route table in src/App.tsx. The two redirect aliases,
 // `/certifications` and `/clientele`, are deliberately absent: they resolve to
 // `/certificates` and `/clients`, which must not be indexed twice.

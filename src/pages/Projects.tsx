@@ -16,7 +16,7 @@ import { DISCIPLINES, PROJECTS, REGISTER_COUNTS, type Discipline } from '@/data/
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Sangam Group project register',
+  name: 'Sangam Ventures project register',
   numberOfItems: PROJECTS.length,
   itemListElement: PROJECTS.map((project, i) => ({
     '@type': 'ListItem',
@@ -96,8 +96,8 @@ export default function Projects() {
   return (
     <PageTransition>
       <Seo
-        title="Projects: Sangam Group of Companies"
-        description={`All ${REGISTER_COUNTS.total} Sangam Group projects with client, scale, contract value, duration and status, from ${REGISTER_COUNTS.earliestYear} onward.`}
+        title="Projects: Sangam Ventures"
+        description={`All ${REGISTER_COUNTS.total} Sangam Ventures projects with client, scale, contract value, duration and status, from ${REGISTER_COUNTS.earliestYear} onward.`}
         path="/projects"
         image="/media/developers/conductor-stringing-1280.webp"
         schema={[schema, breadcrumb([{ name: 'Projects', path: '/projects' }])]}

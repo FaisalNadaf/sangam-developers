@@ -40,7 +40,7 @@ export default function Contact() {
 	return (
 		<PageTransition>
 			<Seo
-				title="Contact Sangam Group: Sangli and Vijayapur"
+				title="Contact Sangam Ventures: Sangli and Vijayapur"
 				description={`Two direct lines for both Sangam companies: ${TELEPHONES.join(" and ")}. Offices in Sangli, Maharashtra and Vijayapur, Karnataka. Send a site enquiry.`}
 				path="/contact"
 				image="/media/developers/sunset-poles-1280.webp"

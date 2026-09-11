@@ -182,7 +182,7 @@ export function Footer() {
         {/* ── Baseline ──────────────────────────────────────────────── */}
         <div className="mt-14 flex flex-col gap-5 border-t border-line-inv pt-8 md:flex-row md:items-center md:justify-between">
           <p className="t-small text-muted-inv">
-            © 2026 Sangam Group of Companies. Designed and developed by{' '}
+            © 2026 Sangam Ventures. Designed and developed by{' '}
             <a
               href="https://cubiccode.in/"
               target="_blank"

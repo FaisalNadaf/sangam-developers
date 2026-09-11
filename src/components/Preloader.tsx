@@ -121,7 +121,7 @@ export function Preloader({ onDone }: { onDone?: () => void }) {
           exit={{ y: '-101%' }}
           transition={{ duration: 0.72, ease: EASE_IN_OUT }}
           role="status"
-          aria-label="Loading Sangam Group of Companies"
+          aria-label="Loading Sangam Ventures"
         >
           <div className="grid-field-inv pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
           <div

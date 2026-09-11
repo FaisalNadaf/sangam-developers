@@ -60,7 +60,7 @@ export function Stats() {
     <section className="section-y ground-paper band-bottom" aria-labelledby="stats-heading">
       <div className="shell">
         <h2 id="stats-heading" className="sr-only">
-          Sangam Group by the numbers
+          Sangam Ventures by the numbers
         </h2>
 
         <div className="grid gap-4 lg:grid-cols-12 lg:gap-5">

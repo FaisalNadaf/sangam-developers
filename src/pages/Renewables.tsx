@@ -67,7 +67,7 @@ const schema = {
 	email: GROUP.emails[1],
 	parentOrganization: {
 		"@type": "Organization",
-		name: "Sangam Group of Companies",
+		name: "Sangam Ventures",
 		"@id": `${SITE}/#organisation`,
 	},
 	address: {
@@ -161,7 +161,7 @@ export default function Renewables() {
 		<PageTransition>
 			<Seo
 				title="Sangam Renewables & Electrosystems LLP: Land to grid"
-				description="Land development and NA conversion, civil and electrical works, and solar and wind energy solutions across Karnataka. Part of Sangam Group."
+				description="Land development and NA conversion, civil and electrical works, and solar and wind energy solutions across Karnataka. Part of Sangam Ventures."
 				path="/renewables"
 				image="/media/renewables/solar-farm-1280.webp"
 				schema={[

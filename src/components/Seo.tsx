@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-const SITE = 'https://sangamgroup.in'
+const SITE = 'https://sangamventures.in'
 const OG_IMAGE = '/media/renewables/wind-farm-1280.webp'
 
 /**
@@ -43,7 +43,7 @@ export function Seo({ title, description, path, image, schema = [] }: SeoProps) 
       <link rel="canonical" href={url} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Sangam Group of Companies" />
+      <meta property="og:site_name" content="Sangam Ventures" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />

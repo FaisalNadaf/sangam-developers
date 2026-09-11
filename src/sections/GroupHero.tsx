@@ -126,7 +126,7 @@ export function GroupHero() {
           transition={{ duration: 0.6, delay: 0.1, ease: EASE_OUT }}
         >
           <Eyebrow accent="var(--color-brand-bright)" tone="dark">
-            Sangam Group of Companies
+            Sangam Ventures
           </Eyebrow>
         </motion.div>
 

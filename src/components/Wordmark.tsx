@@ -1,5 +1,5 @@
 /**
- * Sangam Group wordmark.
+ * Sangam Ventures wordmark.
  *
  * The source documents carry marks for each company but none for the group, so
  * the group signs itself in type. With no glyph beside it the word has to do
@@ -23,13 +23,13 @@ const SIZES = {
   nav: {
     word: 'text-[1.1875rem] md:text-[1.3125rem]',
     descriptor: 'text-[0.5rem] md:text-[0.5625rem]',
-    tracking: '0.278em',
+    tracking: '0.9em',
     gap: 'my-[0.3em]',
   },
   footer: {
     word: 'text-[1.5rem]',
     descriptor: 'text-[0.625rem]',
-    tracking: '0.312em',
+    tracking: '0.925em',
     gap: 'my-[0.34em]',
   },
 } as const
@@ -67,7 +67,7 @@ export function Wordmark({
         // amount back off the right edge squares the block off.
         style={{ letterSpacing: s.tracking, marginInlineEnd: `-${s.tracking}` }}
       >
-        GROUP&nbsp;OF&nbsp;COMPANIES
+        VENTURES
       </span>
     </span>
   )

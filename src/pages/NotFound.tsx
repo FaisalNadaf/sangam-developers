@@ -18,7 +18,7 @@ export default function NotFound() {
   return (
     <PageTransition>
       <Seo
-        title="Page not found: Sangam Group"
+        title="Page not found: Sangam Ventures"
         description="That page is not on this site. Head to the group overview, the project register, or the certificates."
         path="/404"
       />

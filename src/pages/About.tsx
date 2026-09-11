@@ -18,7 +18,7 @@ const aboutSchema = {
 	"@context": "https://schema.org",
 	"@type": "AboutPage",
 	url: `${SITE}/about`,
-	name: "About Sangam Group of Companies",
+	name: "About Sangam Ventures",
 	mainEntity: {
 		"@type": "Organization",
 		"@id": `${SITE}/#organisation`,
@@ -31,7 +31,7 @@ export default function About() {
 	return (
 		<PageTransition>
 			<Seo
-				title="About Sangam Group: Two companies, one operation"
+				title="About Sangam Ventures: Two companies, one operation"
 				description="How Sangam Developers and Sangam Renewables fit together: shared leadership, shared clients and one certified system across a project’s whole ground layer."
 				path="/about"
 				image="/media/developers/site-team-1280.webp"

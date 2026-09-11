@@ -68,7 +68,7 @@ const schema = {
 	email: GROUP.emails[0],
 	parentOrganization: {
 		"@type": "Organization",
-		name: "Sangam Group of Companies",
+		name: "Sangam Ventures",
 		"@id": `${SITE}/#organisation`,
 	},
 	address: {

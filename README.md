@@ -1,6 +1,6 @@
-# Sangam Group of Companies
+# Sangam Ventures
 
-Corporate site for Sangam Group — **Sangam Developers** (est. March 2016) and
+Corporate site for Sangam Ventures — **Sangam Developers** (est. March 2016) and
 **Sangam Renewables & Electrosystems LLP** (incorporated 24 June 2024).
 
 React 19 · Vite 7 · TypeScript · Tailwind v4 · Framer Motion · Lenis

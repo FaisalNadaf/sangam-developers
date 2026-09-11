@@ -1,5 +1,5 @@
 /**
- * Sangam Group — group-level facts.
+ * Sangam Ventures — group-level facts.
  *
  * Every value in this file is transcribed from the company source documents:
  *   • Sangam_Developers_Profile 2025-26 (11 pages)
@@ -53,8 +53,8 @@ const PHONES = [
 ] as const
 
 export const GROUP = {
-  name: 'Sangam Group',
-  fullName: 'Sangam Group of Companies',
+  name: 'Sangam Ventures',
+  fullName: 'Sangam Ventures',
   /**
    * Positioning written from the two company profiles. Both companies build the
    * physical groundwork of renewable energy projects — land, roads, foundations,

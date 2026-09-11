@@ -4,7 +4,7 @@ import { EASE_IN_OUT, EASE_OUT, VIEWPORT } from '@/lib/motion'
 /**
  * The span rule — this site's signature.
  *
- * Sangam Group's work is linear: kilometres of 33 kV line, right-of-way
+ * Sangam Ventures' work is linear: kilometres of 33 kV line, right-of-way
  * corridors, internal roads, land parcels strung across a landscape. A
  * transmission line profile is drawn on a survey sheet as a horizontal datum
  * with a tick at every structure. That is exactly what this is: the rule
