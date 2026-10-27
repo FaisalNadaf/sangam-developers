@@ -36,7 +36,7 @@ const SD_ADDRESS = [
 ]
 
 const SRE_ADDRESS = [
-  'Site No. 145/B, P. No. 3, Building No. 2331, Main Road, Sukoon Colony, SukooN Layout, Vijayapura, Karnataka 586103, India',
+  'Site No. 145/B, P. No. 3, Building No. 2331, Main Road, Sukoon Colony, Sukoon Layout, Vijayapura, Karnataka 586103, India',
 ]
 
 export const CERTIFICATIONS: Certification[] = [
